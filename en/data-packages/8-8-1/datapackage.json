@@ -24,7 +24,7 @@
                 ""
               ]
             },
-            "title": "Outcome"
+            "title": "outcome"
           },
           {
             "name": "Units",
@@ -59,7 +59,7 @@
                 ""
               ]
             },
-            "title": "Sex"
+            "title": "sex"
           },
           {
             "name": "Value",

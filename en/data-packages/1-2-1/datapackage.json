@@ -53,7 +53,7 @@
                 ""
               ]
             },
-            "title": "Sex"
+            "title": "sex"
           },
           {
             "name": "age",
@@ -68,7 +68,7 @@
                 ""
               ]
             },
-            "title": "Age"
+            "title": "age"
           },
           {
             "name": "Units",
