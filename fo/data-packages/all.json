@@ -22,27 +22,27 @@
             "type": "string",
             "constraints": {
               "enum": [
-                "Menn",
-                "Kvinnur",
+                "data.male",
+                "data.female",
                 ""
               ]
             },
-            "title": "Kyn"
+            "title": "data.sex"
           },
           {
             "name": "data.age",
             "type": "string",
             "constraints": {
               "enum": [
-                "15-24 ár",
-                "25-39 ár",
-                "40-49 ár",
-                "50-59 ár",
-                "60+ ár",
+                "data.15-24years",
+                "data.25-39years",
+                "data.40-49years",
+                "data.50-59years",
+                "data.60years",
                 ""
               ]
             },
-            "title": "Aldur"
+            "title": "data.age"
           },
           {
             "name": "Value",
@@ -119,7 +119,7 @@
                 ""
               ]
             },
-            "title": "Kelda"
+            "title": "kelda"
           },
           {
             "name": "Units",
@@ -814,7 +814,7 @@
                 ""
               ]
             },
-            "title": "Kyn"
+            "title": "kyn"
           },
           {
             "name": "Series",
@@ -1185,7 +1185,7 @@
                 ""
               ]
             },
-            "title": "Kyn"
+            "title": "kyn"
           },
           {
             "name": "age",
@@ -1200,7 +1200,7 @@
                 ""
               ]
             },
-            "title": "Aldur"
+            "title": "aldur"
           },
           {
             "name": "Units",
@@ -1319,7 +1319,7 @@
                 ""
               ]
             },
-            "title": "Landabólkur"
+            "title": "landabólkur"
           },
           {
             "name": "Units",
@@ -2417,7 +2417,7 @@
                 ""
               ]
             },
-            "title": "Party"
+            "title": "flokkur"
           },
           {
             "name": "Units",
@@ -2512,7 +2512,7 @@
                 ""
               ]
             },
-            "title": "Kyn"
+            "title": "kyn"
           },
           {
             "name": "Value",
@@ -2559,7 +2559,7 @@
                 ""
               ]
             },
-            "title": "Starv"
+            "title": "starv"
           },
           {
             "name": "public/private",
@@ -3317,7 +3317,7 @@
                 ""
               ]
             },
-            "title": "Kyn"
+            "title": "kyn"
           },
           {
             "name": "age",
@@ -3332,7 +3332,7 @@
                 ""
               ]
             },
-            "title": "Aldur"
+            "title": "aldur"
           },
           {
             "name": "Units",
@@ -3496,7 +3496,7 @@
                 ""
               ]
             },
-            "title": "Kyn"
+            "title": "kyn"
           },
           {
             "name": "Value",
@@ -4017,7 +4017,7 @@
                 ""
               ]
             },
-            "title": "Kyn"
+            "title": "kyn"
           },
           {
             "name": "age",
@@ -4030,7 +4030,7 @@
                 ""
               ]
             },
-            "title": "Aldur"
+            "title": "aldur"
           },
           {
             "name": "Units",
@@ -5986,7 +5986,7 @@
                 ""
               ]
             },
-            "title": "Kyn"
+            "title": "kyn"
           },
           {
             "name": "Value",
@@ -6308,7 +6308,7 @@
                 ""
               ]
             },
-            "title": "Bandbreidd"
+            "title": "bandbreidd"
           },
           {
             "name": "Units",
@@ -6639,7 +6639,7 @@
                 ""
               ]
             },
-            "title": "Kyn"
+            "title": "kyn"
           },
           {
             "name": "Value",
@@ -6698,7 +6698,7 @@
                 ""
               ]
             },
-            "title": "Avleiðing"
+            "title": "avleiðing"
           },
           {
             "name": "Units",
@@ -6733,7 +6733,7 @@
                 ""
               ]
             },
-            "title": "Kyn"
+            "title": "kyn"
           },
           {
             "name": "Value",
@@ -6781,7 +6781,7 @@
                 ""
               ]
             },
-            "title": "Aldur"
+            "title": "aldur"
           },
           {
             "name": "Units",
@@ -6804,7 +6804,7 @@
                 ""
               ]
             },
-            "title": "Kyn"
+            "title": "kyn"
           },
           {
             "name": "Value",
@@ -6899,7 +6899,7 @@
                 ""
               ]
             },
-            "title": "Kelda"
+            "title": "kelda"
           },
           {
             "name": "Units",
@@ -7216,7 +7216,7 @@
                 ""
               ]
             },
-            "title": "Aldur"
+            "title": "aldur"
           },
           {
             "name": "Units",
@@ -7239,7 +7239,7 @@
                 ""
               ]
             },
-            "title": "Kyn"
+            "title": "kyn"
           },
           {
             "name": "Value",
@@ -7752,7 +7752,7 @@
                 ""
               ]
             },
-            "title": "Starv"
+            "title": "starv"
           },
           {
             "name": "Value",
