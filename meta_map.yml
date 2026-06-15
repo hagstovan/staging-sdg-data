@@ -1,3 +1,8 @@
 SOURCE: DATA_SOURCE
 LAST-UPDATED: META_LAST_UPDATE 
 CONTACT: CONTACT
+computation_units: UNITS
+data_footnote: NOTE
+page_content: NOTE
+graph_title: INFO
+indicator_name: INFO
