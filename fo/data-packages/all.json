@@ -7756,29 +7756,6 @@
             "title": "Ár"
           },
           {
-            "name": "outcome",
-            "type": "string",
-            "constraints": {
-              "enum": [
-                "Ikki-deyðilig",
-                "Deyðilig",
-                ""
-              ]
-            },
-            "title": "avleiðing"
-          },
-          {
-            "name": "Units",
-            "type": "string",
-            "constraints": {
-              "enum": [
-                "Í tali",
-                ""
-              ]
-            },
-            "title": "eind"
-          },
-          {
             "name": "Series",
             "type": "string",
             "constraints": {
@@ -7801,6 +7778,29 @@
               ]
             },
             "title": "kyn"
+          },
+          {
+            "name": "outcome",
+            "type": "string",
+            "constraints": {
+              "enum": [
+                "Ikki-deyðilig (á landi, ikki á sjónum)",
+                "Deyðilig (á landi og á sjónum)",
+                ""
+              ]
+            },
+            "title": "avleiðing"
+          },
+          {
+            "name": "Units",
+            "type": "string",
+            "constraints": {
+              "enum": [
+                "Í tali",
+                ""
+              ]
+            },
+            "title": "eind"
           },
           {
             "name": "Value",
