@@ -2,8 +2,3 @@ SOURCE: DATA_SOURCE
 LAST-UPDATED: META_LAST_UPDATE 
 CONTACT: CONTACT
 UNITS: UNIT_MEASURE 
-NOTE: data_footnote 
-NOTE: page_content
-INFO: graph_title
-INFO: indicator_name
-NEXT-UPDATE: source_next_release_1
