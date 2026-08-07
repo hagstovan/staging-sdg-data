@@ -5303,17 +5303,6 @@
             "title": "Year"
           },
           {
-            "name": "Series",
-            "type": "string",
-            "constraints": {
-              "enum": [
-                "Tuberculosis incidence per 100,000 population",
-                ""
-              ]
-            },
-            "title": "measure"
-          },
-          {
             "name": "Units",
             "type": "string",
             "constraints": {
@@ -5323,6 +5312,17 @@
               ]
             },
             "title": "unit"
+          },
+          {
+            "name": "Series",
+            "type": "string",
+            "constraints": {
+              "enum": [
+                "Neonatal mortality rate",
+                ""
+              ]
+            },
+            "title": "measure"
           },
           {
             "name": "Value",

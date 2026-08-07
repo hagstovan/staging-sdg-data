@@ -5303,17 +5303,6 @@
             "title": "Ár"
           },
           {
-            "name": "Series",
-            "type": "string",
-            "constraints": {
-              "enum": [
-                "Nýggir tuberkla-tilburðir fyri hvørjar 100.000 íbúgvar",
-                ""
-              ]
-            },
-            "title": "mát"
-          },
-          {
             "name": "Units",
             "type": "string",
             "constraints": {
@@ -5323,6 +5312,17 @@
               ]
             },
             "title": "eind"
+          },
+          {
+            "name": "Series",
+            "type": "string",
+            "constraints": {
+              "enum": [
+                "Deyðatíttleiki 0-28 dagar fyri hvørji 1.000 livandi fødd",
+                ""
+              ]
+            },
+            "title": "mát"
           },
           {
             "name": "Value",
