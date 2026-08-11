@@ -2755,15 +2755,19 @@
             "title": "Year"
           },
           {
-            "name": "Units",
+            "name": "Series",
             "type": "string",
             "constraints": {
               "enum": [
-                "In number",
+                "Total",
+                "Urban",
+                "Rural",
+                "Diabetes",
+                "Cronical respiratory diseases",
                 ""
               ]
             },
-            "title": "unit"
+            "title": "measure"
           },
           {
             "name": "sex",
@@ -2778,19 +2782,15 @@
             "title": "sex"
           },
           {
-            "name": "Series",
+            "name": "Units",
             "type": "string",
             "constraints": {
               "enum": [
-                "Total",
-                "Urban",
-                "Rural",
-                "Diabetes",
-                "Cronical respiratory diseases",
+                "In number",
                 ""
               ]
             },
-            "title": "measure"
+            "title": "unit"
           },
           {
             "name": "Value",
@@ -5303,6 +5303,17 @@
             "title": "Year"
           },
           {
+            "name": "Series",
+            "type": "string",
+            "constraints": {
+              "enum": [
+                "Tuberculosis incidence",
+                ""
+              ]
+            },
+            "title": "measure"
+          },
+          {
             "name": "Units",
             "type": "string",
             "constraints": {
@@ -5312,17 +5323,6 @@
               ]
             },
             "title": "unit"
-          },
-          {
-            "name": "Series",
-            "type": "string",
-            "constraints": {
-              "enum": [
-                "Neonatal mortality rate",
-                ""
-              ]
-            },
-            "title": "measure"
           },
           {
             "name": "Value",
