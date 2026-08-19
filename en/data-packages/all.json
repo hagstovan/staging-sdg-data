@@ -5180,7 +5180,7 @@
             "type": "string",
             "constraints": {
               "enum": [
-                "Total",
+                " ",
                 "Cardiovascular disease",
                 "Cancer",
                 "Diabetes",

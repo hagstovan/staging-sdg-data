@@ -5180,7 +5180,7 @@
             "type": "string",
             "constraints": {
               "enum": [
-                "Tilsamans",
+                " ",
                 "Hjarta-æðra-sjúkur",
                 "Krabbamein",
                 "Sukursjúka",
