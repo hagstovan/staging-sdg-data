@@ -5170,14 +5170,25 @@
             "constraints": {
               "enum": [
                 "Tilsamans",
-                "Býur",
-                "Bygd",
+                ""
+              ]
+            },
+            "title": "mát"
+          },
+          {
+            "name": "diseases",
+            "type": "string",
+            "constraints": {
+              "enum": [
+                "Tilsamans",
+                "Hjarta-æðra-sjúkur",
+                "Krabbamein",
                 "Sukursjúka",
                 "Kroniskar sjúkur í andaleiðini",
                 ""
               ]
             },
-            "title": "mát"
+            "title": "sjúkubólkar"
           },
           {
             "name": "sex",

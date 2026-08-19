@@ -21,14 +21,25 @@
             "constraints": {
               "enum": [
                 "Total",
-                "Urban",
-                "Rural",
+                ""
+              ]
+            },
+            "title": "measure"
+          },
+          {
+            "name": "diseases",
+            "type": "string",
+            "constraints": {
+              "enum": [
+                "Total",
+                "Cardiovascular disease",
+                "Cancer",
                 "Diabetes",
                 "Cronical respiratory diseases",
                 ""
               ]
             },
-            "title": "measure"
+            "title": "diseases"
           },
           {
             "name": "sex",
