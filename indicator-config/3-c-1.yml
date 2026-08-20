@@ -10,6 +10,8 @@ data_show_map: false
 data_start_values:
   - field: Units
     value: Per 10,000 population
+  - field: occupation
+    value: Medical doctors
 embedded_feature_footer: ''
 embedded_feature_html: ''
 embedded_feature_tab_title: ''
