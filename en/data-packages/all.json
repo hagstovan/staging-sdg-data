@@ -3285,7 +3285,6 @@
             "type": "string",
             "constraints": {
               "enum": [
-                "Total",
                 "Business enterprise",
                 "Public sector",
                 ""
