@@ -9,10 +9,10 @@ data_notice_text: ''
 data_show_map: false
 data_start_values:
   - field: Units
-    value: SH_MED_HWRKDIS
+    value: Units.SH_MED_HWRKDIS
 
-  - field: occupation
-    value: ISCO08_221
+  - field: occupation.occupation
+    value: occupation.ISCO08_221
 embedded_feature_footer: ''
 embedded_feature_html: ''
 embedded_feature_tab_title: ''
