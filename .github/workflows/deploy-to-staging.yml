@@ -43,66 +43,47 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r scripts/requirements.txt
-      - name: Network diagnostics
-        run: |
-          echo "=== Runner ==="
-          uname -a
-          python --version
       
-          echo "=== DNS ==="
-          getent ahosts statbank.hagstova.fo
       
-          echo "=== Public IP ==="
-          curl -s https://api.ipify.org
-          echo
-      
-          echo "=== Statbank test ==="
-          curl -v \
-            --connect-timeout 20 \
-            --max-time 60 \
-            -o /dev/null \
-            -w "Remote IP: %{remote_ip}\nConnect: %{time_connect}s\nTLS: %{time_appconnect}s\nTTFB: %{time_starttransfer}s\nTotal: %{time_total}s\nHTTP: %{http_code}\n" \
-            https://statbank.hagstova.fo/sq/77a82180-e5ba-45d1-bb4b-329df7e91bf6
-      
-      - name: Test PX URLs
-        run: |
-          python - <<'PY'
-          import yaml
-          import urllib.request
-          import urllib.error
-          import sys
-        
-          with open('indicator_id_map.yml', 'r', encoding='utf-8') as f:
-              data = yaml.safe_load(f)
-      
-          failed = False
-      
-          for url in data.keys():
-              try:
-                  req = urllib.request.Request(
-                      url,
-                      headers={'User-Agent': 'Mozilla/5.0'}
-                  )
-                  with urllib.request.urlopen(req, timeout=60) as r:
-                      print(f"OK   {r.status} {url}")
-      
-              except urllib.error.HTTPError as e:
-                  print(f"FAIL {url}")
-                  print(repr(e))
-                  if e.code == 404:
-                      failed = True
-      
-              except Exception as e:
-                  print(f"FAIL {url}")
-                  print(repr(e))
-                  failed = True
-      
-          if failed:
-              print("\n❌ One or more URLs failed (including 404). Failing step.")
-              sys.exit(1)
-      
-          print("\n✅ All URLs OK")
-          PY
+#      - name: Test PX URLs
+#        run: |
+#          python - <<'PY'
+#          import yaml
+#          import urllib.request
+#          import urllib.error
+#          import sys
+#        
+#          with open('indicator_id_map.yml', 'r', encoding='utf-8') as f:
+#              data = yaml.safe_load(f)
+#      
+#          failed = False
+#      
+#          for url in data.keys():
+#              try:
+#                  req = urllib.request.Request(
+#                      url,
+#                      headers={'User-Agent': 'Mozilla/5.0'}
+#                  )
+#                  with urllib.request.urlopen(req, timeout=60) as r:
+#                      print(f"OK   {r.status} {url}")
+#      
+#              except urllib.error.HTTPError as e:
+#                  print(f"FAIL {url}")
+#                  print(repr(e))
+#                  if e.code == 404:
+#                      failed = True
+#      
+#              except Exception as e:
+#                  print(f"FAIL {url}")
+#                  print(repr(e))
+#                  failed = True
+#      
+#          if failed:
+#              print("\n❌ One or more URLs failed (including 404). Failing step.")
+#              sys.exit(1)
+#      
+#          print("\n✅ All URLs OK")
+#          PY
 
       - name: Build data
         run: |
