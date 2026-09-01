@@ -107,7 +107,7 @@ jobs:
 
       - name: Rebuild site
         run: |
-          curl -X POST https://api.github.com/repos/hagstovan/sdg-site/dispatches \
+          curl -X POST https://api.github.com/repos/hagstovan/staging-sdg-site/dispatches \
             -H "Accept: application/vnd.github.everest-preview+json" \
             -H "Authorization: token ${{ secrets.token }}" \
             --data '{"event_type":"rebuild-staging"}'
