@@ -336,8 +336,8 @@ prose:
       - name: META_LAST_UPDATE
         field:
             element: text
-            label: Metadata update
-            translation_key: metadata_fields.META_LAST_UPDATE
+            label: Latest update
+            translation_key: metadata_fields.LATEST_UPDATE
             scope: national
       - name: SDG_RELATED_INDICATORS
         field:
