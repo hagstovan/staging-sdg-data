@@ -2175,7 +2175,7 @@
             "type": "string",
             "constraints": {
               "enum": [
-                "In number",
+                "per 1,000 live births",
                 ""
               ]
             },
@@ -2269,7 +2269,7 @@
             "type": "string",
             "constraints": {
               "enum": [
-                "In number",
+                "per 100,000 live births",
                 ""
               ]
             },
@@ -6492,7 +6492,7 @@
             "type": "string",
             "constraints": {
               "enum": [
-                "In number",
+                "per 1,000 uninfected population",
                 ""
               ]
             },
@@ -6503,7 +6503,7 @@
             "type": "string",
             "constraints": {
               "enum": [
-                "Number of new HIV infections per 1,000 uninfected population",
+                "Number of new HIV infections",
                 ""
               ]
             },
