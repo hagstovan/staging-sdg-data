@@ -43,47 +43,53 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r scripts/requirements.txt
-      
-      
-#      - name: Test PX URLs
-#        run: |
-#          python - <<'PY'
-#          import yaml
-#          import urllib.request
-#          import urllib.error
-#          import sys
-#        
-#          with open('indicator_id_map.yml', 'r', encoding='utf-8') as f:
-#              data = yaml.safe_load(f)
-#      
-#          failed = False
-#      
-#          for url in data.keys():
-#              try:
-#                  req = urllib.request.Request(
-#                      url,
-#                      headers={'User-Agent': 'Mozilla/5.0'}
-#                  )
-#                  with urllib.request.urlopen(req, timeout=60) as r:
-#                      print(f"OK   {r.status} {url}")
-#      
-#              except urllib.error.HTTPError as e:
-#                  print(f"FAIL {url}")
-#                  print(repr(e))
-#                  if e.code == 404:
-#                      failed = True
-#      
-#              except Exception as e:
-#                  print(f"FAIL {url}")
-#                  print(repr(e))
-#                  failed = True
-#      
-#          if failed:
-#              print("\n❌ One or more URLs failed (including 404). Failing step.")
-#              sys.exit(1)
-#      
-#          print("\n✅ All URLs OK")
-#          PY
+
+    
+      - name: Test PX URLs
+        run: |
+          python - <<'PY'
+          import yaml
+          import urllib.request
+          import urllib.error
+
+          with open('indicator_id_map.yml', 'r', encoding='utf-8') as f:
+              data = yaml.safe_load(f)
+
+          failed_urls = []
+
+          for url in data.keys():
+              if not isinstance(url, str) or not url.startswith(('http://', 'https://')):
+                  continue
+
+              try:
+                  req = urllib.request.Request(
+                      url,
+                      headers={'User-Agent': 'Mozilla/5.0'}
+                  )
+
+                  with urllib.request.urlopen(req, timeout=30) as response:
+                      print(f"OK   {response.status} {url}", flush=True)
+
+              except urllib.error.HTTPError as e:
+                  print(f"FAIL HTTP {e.code}: {url}", flush=True)
+                  failed_urls.append(url)
+
+              except Exception as e:
+                  print(f"FAIL {url}: {e}", flush=True)
+                  failed_urls.append(url)
+
+          print("\n--------------------------------")
+
+          if failed_urls:
+              print(f"Found {len(failed_urls)} failing URLs:")
+              for url in failed_urls:
+                  print(f"  {url}")
+          else:
+              print("All tested PX URLs responded successfully.")
+
+          print("--------------------------------")
+          PY
+
 
       - name: Build data
         run: |
