@@ -2469,8 +2469,30 @@
         "fields": [
           {
             "name": "Year",
-            "type": "number",
+            "type": "integer",
             "title": "Year"
+          },
+          {
+            "name": "Series",
+            "type": "string",
+            "constraints": {
+              "enum": [
+                "Inbound Tourism direct GVA as a proportion of total GVA",
+                ""
+              ]
+            },
+            "title": "measure"
+          },
+          {
+            "name": "Units",
+            "type": "string",
+            "constraints": {
+              "enum": [
+                "pct.",
+                ""
+              ]
+            },
+            "title": "unit"
           },
           {
             "name": "Value",
@@ -3088,42 +3110,8 @@
         "fields": [
           {
             "name": "Year",
-            "type": "integer",
+            "type": "number",
             "title": "Year"
-          },
-          {
-            "name": "Units",
-            "type": "string",
-            "constraints": {
-              "enum": [
-                "pct.",
-                ""
-              ]
-            },
-            "title": "unit"
-          },
-          {
-            "name": "Series",
-            "type": "string",
-            "constraints": {
-              "enum": [
-                "Participation rate in organized learning for 6 year olds",
-                ""
-              ]
-            },
-            "title": "measure"
-          },
-          {
-            "name": "sex",
-            "type": "string",
-            "constraints": {
-              "enum": [
-                "Males",
-                "Females",
-                ""
-              ]
-            },
-            "title": "sex"
           },
           {
             "name": "Value",
